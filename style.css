@@ -1,0 +1,576 @@
+/* style.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .navbar {
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 0; /* Changed to 0 */
+    margin-right: 20px; /* Added margin to the right */
+  }
+  
+  .logo img {
+    height: 30px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 0; /* Changed to 0 */
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin-left: 0%;
+  }
+  
+  .nav-links a:hover {
+    color: #f05050;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .search-bar input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    margin-right: 10px;
+  }
+  
+  .search-bar button {
+    background-color: #f05050;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .user-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    margin-left: 85px;
+  }
+  
+  .user-icon, .wishlist-icon, .bag-icon {
+    font-size: 18px;
+    color: #333;
+    margin-right: 5px;
+    transition: color 0.3s;
+  }
+  
+  .user-icon:hover, .wishlist-icon:hover, .bag-icon:hover {
+    color: #f05050;
+  }
+  
+  .icon-text {
+    font-size: 12px;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .icon-text:hover {
+    color: #f05050;
+  }
+  
+  /* Dropdown Menu Styling */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    padding: 10px;
+  }
+  
+  .dropdown-menu li {
+    list-style: none;
+    padding: 5px 0;
+  }
+  
+  .dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #eee;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Responsive Styling for 75% Zoom */
+  @media (zoom: 100%) {
+    .container {
+      max-width: 500px;
+    }
+    
+    .nav-links li {
+      margin-right: 15px;
+    }
+  
+    .search-bar input {
+      width: 700px;
+    }
+  
+    .user-actions .icon-container {
+      margin-left: 85px;
+    }
+  
+    .dropdown-menu {
+      width: 120px;
+    }
+  }
+/* Add styles for the product section */
+.product-item {
+    width: 20%;
+    margin: 10px;
+    display: inline-block;
+   margin-top: 15px;
+   grid-row: 200px;
+   background-color: maroon;
+   text-align: center;
+
+  } 
+  .product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .marq{
+    margin-top: 10px;
+  }
+  
+  .product-info-row {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid wheat;
+    border-top: none;
+    grid-template-rows: 80px;
+    background-color: whitesmoke;
+  }
+  
+  .product-info-row p {
+    margin-bottom: 10px;
+  }
+  
+  .brand {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .price {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .product-number {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .add-to-cart {
+   background-color: maroon;
+    color: wheat;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart:hover {
+    background-color:green;
+  }
+  
+  .add-to-cart:active {
+    transform: translateY(2px);
+  }
+  
+  .rating {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .rating i {
+    color: #ffd700;
+  }
+  body{
+    background: fixed;
+    background-color: whitesmoke;
+  }
+.product-grid{
+    background-color: white;
+    width: 1500px;
+    object-fit: cover;
+    display: flex;
+}
+
+ 
+  .coupon-btn {
+    background-color: wheat;
+    color: maroon;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 3px;
+  }
+  
+  .coupon-btn:hover {
+    background-color: #3e8e41;
+  }
+  
+  .coupon-btn:active {
+    transform: translateY(2px);
+  }
+  
+  .coupon-item:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  .coupon-section {
+    padding: 50px 0;
+    background-color:white;
+  }
+  
+  .coupon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+
+  }
+  
+  .coupon-item {
+    height: 230px;
+    width: 340px;
+    background-color: white;
+    padding: 5px;
+    border: 5px solid wheat;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: wheat;
+  }
+  
+  .coupon-item h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: wheat;
+  }
+  
+  .coupon-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .coupon-btn {
+    background-color: wheat;
+    color:maroon;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 200px;
+    margin-top: -20px;
+  }
+  
+  .coupon-btn:hover {
+    background-color:green;
+    color:white;
+
+  }
+  
+  .coupon-btn:active {
+    transform: translateY(2px);
+  }
+  
+  .coupon-item:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .best-coupon {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .best-coupon h2 {
+    color: #333;
+  }
+  
+  .best-coupon p {
+    color: #666;
+  }
+  .brand-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  .brand-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .brand-logo img {
+    width: 300px;
+    height: 150px;
+    margin: 10px;
+  }
+  .brand-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 1300px;
+    margin-left: 15px;
+    gap: 25px;
+  }
+  
+  .brand-logos img {
+    width: 150px;     
+    height: 150px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 0px;
+  }
+  .footer-content {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+  }
+  
+  .footer-section {
+    flex: 1 0 200px; /* Adjust flex for responsiveness */
+    margin: 0 20px; /* Space between sections */
+  }
+  
+  .footer-section h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9em;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styling for Images and Text in the Last Section */
+  .footer-section img {
+    vertical-align: middle; /* Align image with text */
+    margin-right: 10px; 
+    height: 100px;
+    width: 100px;   /* Space between image and text */
+  }
+  
+  /* Footer Bottom Styling */
+  .footer-bottom {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.8em;
+  }
+  
+  /* Responsive Adjustments (Media Queries) */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column; /* Stack sections vertically */
+      align-items: center;
+    }
+  
+    .footer-section {
+      margin: 20px 0; /* Space between sections */
+      text-align: center; /* Center content */
+    }
+  }
+  #RET2{
+    height: 100PX;
+    width: 140px;
+  }
+  #a1{
+    height: 200px;
+    width: 200px;
+  }
+  .icon-text:hover .dropdown-content {
+    display: block; /* Makes the dropdown visible on hover */
+  }
+  
+  .dropdown-content {
+    display: none; /* Hides the dropdown by default */
+  }
+  body{
+     /* Replace with your background image URL */
+    background-size: cover; /* Ensures the background covers the entire page */
+    background-attachment: fixed; /* This makes the background fixed */
+    background-position: center; 
+    height: 100%;
+    width: 100%;
+  }
+  *{
+    background: fixed;
+    background-attachment: fixed;
+  }
+  /*Add Can Be Delete*/
+  .product-item {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px pink;
+  }
+  
+  .product-item img {
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .product-item:hover img {
+    opacity: 0.8;
+  }
+  
+  .product-info-row {
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .product-item:hover .product-info-row {
+    background-color: #f7f7f7;
+  }
+  
+  .add-to-cart {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  
+  .product-item:hover .add-to-cart {
+    background-color: #3e8e41;
+    color: #fff;
+  }
+  /*Add Css extra*/
+  .marq marquee {
+    animation: marquee 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      margin-left: 0;
+    }
+    10% {
+      margin-left: 0;
+    }
+    15% {
+      margin-left: -1100px;
+    }
+    25% {
+      margin-left: -1100px;
+    }
+    30% {
+      margin-left: -2200px;
+    }
+    40% {
+      margin-left: -2200px;
+    }
+    45% {
+      margin-left: -3300px;
+    }
+    55% {
+      margin-left: -3300px;
+    }
+    60% {
+      margin-left: -4400px;
+    }
+    70% {
+      margin-left: -4400px;
+    }
+    75% {
+      margin-left: -5500px;
+    }
+    100% {
+      margin-left: -5500px;
+    }
+  }
+  .marq{
+    background-image: url("back23.jpg");
+   }
+body
+  {
+    background: 100% fixed;
+    height: 100%;
+    width: 100%;
+  }
+  /*Add **/
+  body{
+    background-color:whitesmoke;
+    height: 100%;
+    width: 100%;
+  }
+
+ 
+  
